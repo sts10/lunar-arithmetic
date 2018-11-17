@@ -30,24 +30,20 @@ fn lunar_multiply(a: usize, b: usize) -> usize {
     a.reverse();
     b.reverse();
 
-    let mut i = 0;
-    for b_dig in b {
+    for (i, b_dig) in b.iter().enumerate() {
         let mut product_digits: Vec<u32> = [].to_vec();
 
         for a_dig in &a {
-            if b_dig < *a_dig {
-                product_digits.insert(0, b_dig);
+            if b_dig < a_dig {
+                product_digits.insert(0, *b_dig);
             } else {
                 product_digits.insert(0, *a_dig);
             }
         }
-        let mut j = 0;
-        while j < i {
+        for _j in 0..i {
             product_digits.push(0);
-            j += 1;
         }
         numbers_to_add.push(vector_of_digits_to_int(product_digits));
-        i += 1;
     }
     // println!("numbers_to_add is current {:?}", numbers_to_add);
 
