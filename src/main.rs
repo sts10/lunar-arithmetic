@@ -88,6 +88,7 @@ fn vector_of_digits_to_int(digits_vec: Vec<u32>) -> usize {
     let num: usize = as_string.parse().unwrap();
     num
 }
+
 #[test]
 fn can_do_lunar_addition() {
     assert_eq!(lunar_add(7, 8), 8);
