@@ -37,24 +37,19 @@ fn lunar_multiply(a: usize, b: usize) -> usize {
         for a_dig in &a {
             if b_dig < *a_dig {
                 product_digits.insert(0, b_dig);
-            // product_digits.push(b_dig);
             } else {
                 product_digits.insert(0, *a_dig);
-                // product_digits.push(*a_dig);
             }
         }
-        // product_digits.reverse();
         let mut j = 0;
-        if j < i {
-            while j < i {
-                product_digits.push(0);
-                j += 1;
-            }
+        while j < i {
+            product_digits.push(0);
+            j += 1;
         }
         numbers_to_add.push(vector_of_digits_to_int(product_digits));
         i += 1;
     }
-    println!("numbers_to_add is current {:?}", numbers_to_add);
+    // println!("numbers_to_add is current {:?}", numbers_to_add);
 
     let mut running_sum: usize = 0;
 
@@ -63,8 +58,7 @@ fn lunar_multiply(a: usize, b: usize) -> usize {
     }
     running_sum
 }
-//
-//
+
 fn vectorize_and_pad(a: usize, b: usize) -> (Vec<u32>, Vec<u32>) {
     let mut a: Vec<_> = a
         .to_string()
