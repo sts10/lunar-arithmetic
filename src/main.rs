@@ -48,11 +48,11 @@ fn lunar_multiply(a: usize, b: usize) -> usize {
         if j < i {
             while j < i {
                 product_digits.push(0);
-                j = j + 1;
+                j += 1;
             }
         }
         numbers_to_add.push(vector_of_digits_to_int(product_digits));
-        i = i + 1;
+        i += 1;
     }
     println!("numbers_to_add is current {:?}", numbers_to_add);
 
