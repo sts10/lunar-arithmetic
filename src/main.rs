@@ -12,11 +12,10 @@ fn main() {
 
 fn lunar_add(a: usize, b: usize) -> usize {
     let (a, b) = vectorize_and_pad(a, b);
-
     let mut sum_digits: Vec<u32> = [].to_vec();
 
     // doing the lunar addition
-    for (i, _digit) in a.iter().enumerate() {
+    for i in 0..a.len() {
         if a[i] > b[i] {
             sum_digits.push(a[i]);
         } else {
@@ -29,10 +28,9 @@ fn lunar_add(a: usize, b: usize) -> usize {
 
 fn lunar_multiply(a: usize, b: usize) -> usize {
     let (mut a, mut b) = vectorize_and_pad(a, b);
-    let mut numbers_to_add: Vec<usize> = [].to_vec();
-
     a.reverse();
     b.reverse();
+    let mut numbers_to_add: Vec<usize> = [].to_vec();
 
     for (i, b_dig) in b.iter().enumerate() {
         let mut product_digits: Vec<u32> = [].to_vec();
