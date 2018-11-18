@@ -1,4 +1,14 @@
 [[package]]
+name = "eyeoh"
+version = "0.1.0"
+source = "git+https://github.com/sts10/eyeoh#341b74c61d2da6e5516e2e995d89432b99502ac7"
+
+[[package]]
 name = "lunar-arithmetic"
 version = "0.1.0"
+dependencies = [
+ "eyeoh 0.1.0 (git+https://github.com/sts10/eyeoh)",
+]
 
+[metadata]
+"checksum eyeoh 0.1.0 (git+https://github.com/sts10/eyeoh)" = "<none>"

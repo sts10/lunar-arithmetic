@@ -1,9 +1,13 @@
+extern crate eyeoh;
+use eyeoh::ensure;
+
 fn main() {
-    let a = 17;
-    let b = 26;
-    println!("On the moon, 17 + 26 is {}", lunar_add(a, b));
-    println!("On the moon, 58 + 19 is {}", lunar_add(58, 19));
-    println!("On the moon, 15866 + 147 is {}", lunar_add(15866, 147));
+    println!("Enter the first number");
+    let a: usize = ensure("Please enter an integer").unwrap();
+    println!("Enter the second number");
+    let b: usize = ensure("Please enter an integer").unwrap();
+    println!("On the moon, {} + {} is {}", a, b, lunar_add(a, b));
+    println!("On the moon, {} * {} is {}", a, b, lunar_multiply(a, b));
 }
 
 fn lunar_add(a: usize, b: usize) -> usize {
