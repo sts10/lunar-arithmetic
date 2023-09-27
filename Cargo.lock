@@ -9,7 +9,7 @@ source = "git+https://github.com/sts10/eyeoh#341b74c61d2da6e5516e2e995d89432b995
 
 [[package]]
 name = "lunar-arithmetic"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "eyeoh",
 ]

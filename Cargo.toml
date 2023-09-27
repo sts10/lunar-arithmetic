@@ -1,7 +1,8 @@
 [package]
 name = "lunar-arithmetic"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["sts10 <sschlinkert@gmail.com>"]
+edition = "2021"
 license = "BlueOak-1.0.0"
 
 [dependencies]
